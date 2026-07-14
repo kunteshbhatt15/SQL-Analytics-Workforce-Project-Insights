@@ -2,11 +2,11 @@
 
 A normalized 4-table MySQL schema (departments, employees, projects, assignments) with 14 analytical queries covering joins, window functions (`DENSE_RANK`, running totals), CTEs, and views — built to practice production-style analytical SQL patterns.
 
-## 📊 Overview
+## Overview
 
 This project models a simple organizational database with **10 departments**, **50 employees**, **20 projects**, and **100 employee-project assignments**, then uses SQL to surface compensation, tenure, and project-cost insights.
 
-## 🗂️ Schema
+## Schema
 
 | Table | Rows | Description |
 |---|---|---|
@@ -22,7 +22,7 @@ This project models a simple organizational database with **10 departments**, **
 - One department has many employees and many projects (1:N)
 - Employees and projects have a many-to-many relationship, resolved via `EMPLOYEE_PROJECTS`
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```
 ├── SQL_Project.sql              # Full DDL, sample data, and all analysis queries
@@ -35,7 +35,7 @@ This project models a simple organizational database with **10 departments**, **
     └── employee_projects.csv
 ```
 
-## 🔍 Business Questions Answered
+##  Business Questions Answered
 
 1. Total and average salary by department (ranked by total salary)
 2. Top 3 longest-tenured employees
@@ -52,7 +52,7 @@ This project models a simple organizational database with **10 departments**, **
 13. A `HighSalaryEmployees` view showing the top earner per department
 14. Employees working on above-average-budget projects
 
-## 🛠️ Tech & Concepts Used
+##  Tech & Concepts Used
 
 - **Joins:** `INNER JOIN` across employees, departments, projects
 - **Aggregations:** `SUM`, `AVG`, `MIN`, `MAX`, `COUNT` with `GROUP BY` / `HAVING`
@@ -61,7 +61,7 @@ This project models a simple organizational database with **10 departments**, **
 - **CTEs:** `WITH ... AS (...)`
 - **Views:** `CREATE VIEW`
 
-## ▶️ How to Run
+##  How to Run
 
 1. Install MySQL (8.0+ recommended, for window function support).
 2. Run the script:
@@ -70,7 +70,7 @@ This project models a simple organizational database with **10 departments**, **
    ```
 3. This creates the `ESA_SQL_2025` database, tables, sample data, and executes all analysis queries.
 
-## 📌 Notes
+##  Notes
 
 - The CSV files in `/dataset` are exports of the sample data for quick exploration in Excel, pandas, or BI tools without needing to run the full SQL script.
 - All salary figures are illustrative sample data, not real compensation figures.
